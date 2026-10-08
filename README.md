@@ -107,37 +107,15 @@ Cancer-Prediction-System/
 
 ---
 
-## 🚀 Quickstart & Reproduction Guide
+## Running the Project
 
-### Prerequisites
-- Python 3.11 (with `pip`)
-
-### 1. Install Dependencies
+Install the required dependencies:
 ```bash
 py -3.11 -m pip install -r requirements.txt
 ```
 
-### 2. Train Models & Generate Benchmarks
-Execute the end-to-end training pipeline. This performs leak-free feature selection, cross-validation, hyperparameter tuning, model artifact serialization, and metric reporting:
-```bash
-py -3.11 train_model.py
-```
-
-### 3. Launch the Streamlit Web Application
+Run the Streamlit application:
 ```bash
 py -3.11 -m streamlit run app.py
 ```
-Open your browser to `http://localhost:8501`.
 
-### 4. Run Automated Test Suite
-```bash
-py -3.11 -m pytest tests/
-```
-
----
-
-## 📚 Deep-Dive Documentation
-
-For detailed technical and educational walkthroughs, consult:
-- **[`docs/PROJECT_GUIDE.md`](docs/PROJECT_GUIDE.md)**: Deep mathematical derivations, model assumptions, clinical metric theory, and 10 common data science interview defense questions.
-- **[`docs/DEVELOPMENT_LOG.md`](docs/DEVELOPMENT_LOG.md)**: Engineering journal documenting legacy code audit, bug fixes, experiments, and lessons learned.
