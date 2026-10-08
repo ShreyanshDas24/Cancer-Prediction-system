@@ -10,6 +10,12 @@
 
 ---
 
+## Live Demo
+
+[🚀 Open the Cancer Prediction System](https://cancer-prediction-system-vzs4nqsq7xpbv7kiesciem.streamlit.app/)
+
+---
+
 ## ⚠️ Educational & Research Disclaimer
 
 **This project is developed exclusively for educational and scientific research purposes.**  
