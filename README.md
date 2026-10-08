@@ -1,204 +1,143 @@
-# 🔬 Advanced Cancer Prediction System - Project Report
+# 🔬 Advanced Cancer Prediction System
 
-## Executive Summary
+> **A Reproducible Machine Learning Study & Interactive Streamlit Application**  
+> *Wisconsin Diagnostic Breast Cancer (WDBC) Dataset | Python 3.11 & scikit-learn*
 
-This project presents a state-of-the-art machine learning system for cancer prediction, achieving **97.37% accuracy** using the Wisconsin Breast Cancer Dataset. The system incorporates advanced ML techniques, comprehensive feature engineering, and a professional web-based interface suitable for medical applications.
-
-## 🚀 [Live Demo] https://cancer-prediction-system.netlify.app/
-## 🎯 Project Highlights
-
-### Performance Achievements
-- **Best Model**: Support Vector Machine (SVM) & Neural Network (tied)
-- **Accuracy**: 97.37% (114/114 test samples)
-- **AUC Score**: 0.994 (SVM) / 0.996 (Neural Network)
-- **Sensitivity**: 97.22% (Benign detection)
-- **Specificity**: 97.62% (Malignant detection)
-
-### Technical Excellence
-- **7 Advanced ML Models** with hyperparameter tuning
-- **Ensemble Methods** with voting classifiers
-- **Feature Engineering** with correlation-based selection
-- **Professional Web Interface** with medical-grade UX
-
-## 📊 Model Performance Comparison
-
-| Model | Accuracy | AUC Score | Key Features |
-|-------|----------|-----------|--------------|
-| SVM | 97.37% | 0.9940 | RBF kernel, C=100 |
-| Neural Network | 97.37% | 0.9964 | 2-layer MLP (100,50) |
-| Ensemble Voting | 96.49% | 0.9940 | 4-model ensemble |
-| XGBoost | 95.61% | 0.9901 | 200 estimators |
-| Logistic Regression | 95.61% | 0.9911 | L1 regularization |
-| Random Forest | 94.74% | 0.9907 | 200 trees, depth=10 |
-| Gradient Boosting | 93.86% | 0.9891 | 100 estimators |
-
-## 🧬 Dataset & Features
-
-### Wisconsin Breast Cancer Dataset
-- **569 samples** (357 benign, 212 malignant)
-- **30 original features** computed from cell nuclei images
-- **15 selected features** based on correlation analysis
-
-### Top 5 Most Important Features
-1. **Worst Perimeter** (16.44% importance)
-2. **Worst Concave Points** (14.84% importance)
-3. **Worst Radius** (14.09% importance)
-4. **Worst Area** (13.17% importance)
-5. **Mean Concave Points** (13.12% importance)
-
-## 🔧 Technical Implementation
-
-### Advanced ML Techniques
-- **GridSearchCV** & **RandomizedSearchCV** for hyperparameter optimization
-- **StandardScaler** for feature normalization
-- **Stratified splitting** to maintain class distribution
-- **Cross-validation** (5-fold CV) for robust evaluation
-- **Ensemble methods** for improved performance
-
-### Model Architecture
-```
-Input Features (15) → Scaling → Feature Selection → Model Training
-                                                  ↓
-Best Models: SVM (RBF) & Neural Network (100-50-1)
-                                                  ↓
-Ensemble Voting → Final Prediction + Confidence
-```
-
-### Hyperparameter Optimization
-- **SVM**: C=100, gamma='scale', kernel='rbf'
-- **Neural Network**: hidden_layers=(100,50), activation='relu'
-- **Random Forest**: n_estimators=200, max_depth=10
-- **XGBoost**: n_estimators=200, max_depth=6
-
-## 💻 Web Application Features
-
-### 🎯 Prediction Interface
-- **Interactive input forms** for 15 key features
-- **Real-time validation** with normal range indicators
-- **Risk stratification**: Low/Medium/High categories
-- **Confidence scoring** with probability breakdown
-- **Medical recommendations** based on results
-
-### 📈 Model Analytics
-- **Performance comparison charts**
-- **Feature importance visualization**
-- **Model parameter displays**
-- **Cross-validation metrics**
-
-### 🏥 Medical Integration
-- **Professional medical design**
-- **Print-friendly results**
-- **Clinical disclaimers**
-- **Educational content**
-
-## 🔬 Clinical Validation
-
-### Confusion Matrix (SVM Model)
-```
-                Predicted
-              Malignant  Benign
-Actual Malignant   41      1
-       Benign       2     70
-```
-
-### Key Metrics
-- **Precision (Benign)**: 98.59%
-- **Precision (Malignant)**: 95.35%
-- **False Positive Rate**: 2.38%
-- **False Negative Rate**: 2.78%
-
-## 📚 Dataset Information
-
-### Source
-- **Wisconsin Diagnostic Breast Cancer Dataset**
-- **UCI Machine Learning Repository**
-- **Dr. William H. Wolberg, University of Wisconsin**
-
-### Features Categories
-1. **Size Measurements**: radius, perimeter, area
-2. **Shape Characteristics**: compactness, concavity, concave points
-3. **Texture Properties**: smoothness, symmetry, fractal dimension
-4. **Statistical Variations**: standard error, worst values
-
-## 🚀 Deployment & Accessibility
-
-### Web Application
-- **Responsive design** for all devices
-- **Cross-browser compatibility**
-- **Fast loading** with optimized assets
-- **Accessible interface** following WCAG guidelines
-
-### Technical Stack
-- **Frontend**: HTML5, CSS3, JavaScript
-- **ML Backend**: Python, Scikit-learn
-- **Visualization**: Chart.js
-- **Deployment**: Web-based interface
-
-## ⚠️ Limitations & Disclaimers
-
-### Medical Disclaimer
-- **Not a substitute** for professional medical diagnosis
-- **Educational purpose only**
-- **Requires physician interpretation**
-- **Based on limited dataset scope**
-
-### Technical Limitations
-- **Single dataset training** (generalizability concerns)
-- **Feature-based prediction** (no image analysis)
-- **Simplified model deployment** (not production-grade)
-
-## 🔮 Future Enhancements
-
-### Advanced Features
-- **Deep learning models** with CNN for image analysis
-- **Multi-modal integration** (clinical + imaging data)
-- **Federated learning** for privacy-preserving training
-- **Real-time model updating** with new data
-
-### Clinical Integration
-- **FHIR compliance** for healthcare systems
-- **EHR integration** capabilities
-- **Multi-language support**
-- **Telemedicine compatibility**
-
-## 📈 Project Impact
-
-### Educational Value
-- **Comprehensive ML pipeline** demonstration
-- **Real-world dataset application**
-- **Professional development practices**
-- **Medical AI ethics consideration**
-
-### Technical Excellence
-- **Graduate-level implementation** complexity
-- **Industry-standard practices**
-- **Reproducible methodology**
-- **Scalable architecture**
-
-## 🏆 Conclusion
-
-This Advanced Cancer Prediction System demonstrates the successful application of modern machine learning techniques to healthcare challenges. With 97.37% accuracy and a professional web interface, it represents a comprehensive solution suitable for both educational and preliminary clinical applications.
-
-The system successfully integrates:
-- **Multiple ML algorithms** with optimal hyperparameter tuning
-- **Advanced feature engineering** and selection techniques
-- **Professional-grade web interface** with medical design principles
-- **Comprehensive evaluation** with clinical metrics
-
-This project showcases the potential of AI/ML in healthcare while maintaining appropriate clinical disclaimers and limitations awareness.
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange.svg)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.65.0-red.svg)](https://streamlit.io/)
+[![Tests](https://img.shields.io/badge/Tests-11%20Passed-brightgreen.svg)]()
 
 ---
 
-**🔬 Project Status**: Complete  
-**📅 Completion Date**: August 2025  
-**👨‍💻 Development Level**: CSE BTech Graduate  
-**🎯 Accuracy Achieved**: 97.37%  
-**🏥 Clinical Readiness**: Educational/Research Phase
+## ⚠️ Educational & Research Disclaimer
 
+**This project is developed exclusively for educational and scientific research purposes.**  
+It calculates statistical probability estimates based on machine-learning models trained on the historical 1995 Wisconsin Diagnostic Breast Cancer dataset. **It does not provide medical diagnoses, clinical guidance, or treatment recommendations.** Never use this tool for healthcare or medical decisions.
 
-## ⚠️ Disclaimer
-Educational purposes only. Not for clinical diagnosis.
+---
 
-## 📧 Contact
-- GitHub: https://github.com/SwastikaManna
-- Email: swastikamanna03@gmail.com
+## 🎯 Target Label Convention
+
+In the scikit-learn Wisconsin Diagnostic Breast Cancer dataset:
+- **`0 = Malignant`** (Safety-critical positive class of interest)
+- **`1 = Benign`** (Negative class)
+
+All evaluation metrics, confusion matrices, and risk categorizations in this repository explicitly enforce this convention. Malignant Recall (Sensitivity) measures the detection rate of actual malignant cases ($0$).
+
+---
+
+## 📊 Verified Model Benchmark Results
+
+All metrics below were **reproduced deterministically** by training from scratch on the 80% training set ($N=455$) and evaluating on the unseen holdout test set ($N=114$):
+
+| Model Paradigm | 15-Feat ROC-AUC | 15-Feat Malignant Recall | 15-Feat Accuracy | 15-Feat Malignant F1 | 30-Feat Baseline ROC-AUC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Neural Network (MLP)** 🏆 *(Champion)* | **0.9937** | **0.9524** (40/42) | **0.9737** | **0.9639** | 0.9944 |
+| **Support Vector Machine (RBF)** | 0.9931 | 0.9286 (39/42) | 0.9561 | 0.9398 | **0.9977** |
+| **Logistic Regression (L2)** | 0.9931 | 0.9286 (39/42) | 0.9561 | 0.9398 | 0.9954 |
+| **Random Forest Classifier** | 0.9904 | 0.9286 (39/42) | 0.9561 | 0.9398 | 0.9934 |
+| **Gradient Boosting Classifier** | 0.9921 | 0.9048 (38/42) | 0.9474 | 0.9268 | 0.9950 |
+| **K-Nearest Neighbors (KNN)** | 0.9800 | 0.9048 (38/42) | 0.9386 | 0.9157 | 0.9917 |
+| **Decision Tree (CART)** | 0.9793 | 0.8810 (37/42) | 0.9474 | 0.9250 | 0.9448 |
+
+> **Champion Selection Rationale**: MLP was selected as the champion based on the project's predefined cross-validation selection criterion applied exclusively to the training data. It subsequently achieved the strongest holdout-test results, including 95.24% malignant recall, 0.9937 ROC-AUC, and 97.37% accuracy.
+
+---
+
+## 🏛️ System Architecture
+
+```
+User Input (15 Features in Streamlit UI)
+                   ↓
+      CancerPredictor (src/predict.py)
+                   ↓
+scikit-learn Pipeline (StandardScaler → Model)
+                   ↓
+P(Malignant) Probability & Risk Categorization
+                   ↓
+Feature Deviation Z-Scores (vs. Benign Cohort)
+```
+
+### Two-Pipeline Strategy:
+1. **Experimental Baseline Pipeline (30 Features)**: Retains all original measurements to provide a reference point for evaluating the reduced 15-feature pipeline.
+2. **Production Pipeline (15 Features)**: Selects 15 features using ANOVA F-statistic strictly on `X_train` without data leakage. The reduced feature set retains performance close to the 30-feature baseline while reducing the number of user inputs.
+
+---
+
+## 📁 Repository Structure
+
+```
+Cancer-Prediction-System/
+├── app.py                          # Streamlit clinical dashboard application
+├── train_model.py                  # CLI pipeline runner (trains & saves models)
+├── requirements.txt                # Pinned Python dependencies
+├── README.md                       # Project overview and reproduction guide
+├── .gitignore                      # Git exclusion rules
+│
+├── data/
+│   ├── raw/                        # Raw WDBC dataset cache
+│   └── processed/                  # Deterministic train/test split CSVs
+│
+├── models/
+│   ├── best_model.joblib           # Champion 15-feature production pipeline
+│   ├── all_models.joblib           # All 7 trained 15-feature pipelines
+│   ├── metrics_summary.json        # Verified test metrics & curves data
+│   └── feature_metadata.json       # 15 feature stats, ranges, units, medians
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py              # Data acquisition, validation & splitting
+│   ├── preprocessing.py            # Pipelines & leak-free feature selection
+│   ├── train.py                    # 7 models, GridSearch, Stratified CV
+│   ├── evaluate.py                 # Metrics with Malignant as positive class
+│   └── predict.py                  # Inference service & risk categorization
+│
+├── assets/                         # Generated ROC curves, confusion matrices
+│
+├── docs/
+│   ├── PROJECT_GUIDE.md            # Deep educational manual (math, theory, code)
+│   └── DEVELOPMENT_LOG.md          # Chronological engineering journal
+│
+└── tests/
+    ├── test_data_loader.py         # Data validation tests
+    ├── test_preprocessing.py       # Pipeline & feature selection tests
+    └── test_predict.py             # Inference & risk categorization tests
+```
+
+---
+
+## 🚀 Quickstart & Reproduction Guide
+
+### Prerequisites
+- Python 3.11 (with `pip`)
+
+### 1. Install Dependencies
+```bash
+py -3.11 -m pip install -r requirements.txt
+```
+
+### 2. Train Models & Generate Benchmarks
+Execute the end-to-end training pipeline. This performs leak-free feature selection, cross-validation, hyperparameter tuning, model artifact serialization, and metric reporting:
+```bash
+py -3.11 train_model.py
+```
+
+### 3. Launch the Streamlit Web Application
+```bash
+py -3.11 -m streamlit run app.py
+```
+Open your browser to `http://localhost:8501`.
+
+### 4. Run Automated Test Suite
+```bash
+py -3.11 -m pytest tests/
+```
+
+---
+
+## 📚 Deep-Dive Documentation
+
+For detailed technical and educational walkthroughs, consult:
+- **[`docs/PROJECT_GUIDE.md`](docs/PROJECT_GUIDE.md)**: Deep mathematical derivations, model assumptions, clinical metric theory, and 10 common data science interview defense questions.
+- **[`docs/DEVELOPMENT_LOG.md`](docs/DEVELOPMENT_LOG.md)**: Engineering journal documenting legacy code audit, bug fixes, experiments, and lessons learned.
